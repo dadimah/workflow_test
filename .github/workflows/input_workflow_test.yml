@@ -1,0 +1,40 @@
+name: Workflow input test
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs: 
+      stringInput:
+        type: string
+        description: String variable input
+        required: true
+      choiceInput:
+        type: choice
+        description: choice input
+        required: true
+        options:
+         - option1
+         - option2
+      booleanInput:
+        type: boolean
+        description: Boolean checkbox
+        required: true
+
+concurrency:
+  group: ${{github.ref_name}}
+
+jobs:
+  BaseConfigExample:
+    name: Basic Example
+    runs-on: ubuntu-latest
+    environment: Development
+
+    steps:
+      - name: Print Inputs
+        run: |
+          echo ${{ github.event.inputs.stringInput }}
+          echo ${{ github.event.inputs.choiceInput }}
+          echo ${{ github.event.inputs.booleanInputs }}
+
+      - name: Test Wait
+        run: |
+          sleep 600
