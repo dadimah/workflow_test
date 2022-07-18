@@ -37,4 +37,4 @@ jobs:
 
       - name: Test Wait
         run: |
-          sleep 600
+          sleep 10
