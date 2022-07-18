@@ -22,7 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout repository
+      # - name: Checkout repository
       - uses: actions/checkout@v3
 
       # Custom Steps
@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      # - name: Checkout repository
       - uses: actions/checkout@v3
 
       # Custom Steps
