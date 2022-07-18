@@ -34,8 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo test > file.txt
-  job_02:
+
+  Sai_Jenkins_job:
     runs-on: ubuntu-latest
 
     steps:
@@ -43,9 +43,37 @@ jobs:
       - uses: actions/checkout@v3
 
       # Custom Steps
-      - name: Run a one-line script
+      - name: Declarative Tool Install
         run: echo Hello, world!
       
       # Custom Steps
-      - name: Custom Command
-        run: pwd ; ls -ltra ; dir
+      - name: Check Previos build
+        run: echo Hello, world!
+
+      # Custom Steps
+      - name: Preparation
+        run: echo Hello, world!
+
+      # Custom Steps
+      - name: Build Parent
+        run: echo Hello, world!
+
+      # Custom Steps
+      - name: Analyze Dependencies
+        run: echo Hello, world!
+
+      # Custom Steps
+      - name: Analyze oseries
+        run: echo Hello, world!
+
+      # Custom Steps
+      - name: Analyze oseries database
+        run: echo Hello, world!
+
+      # Custom Steps
+      - name: Analyze oseries database-image
+        run: echo Hello, world!
+
+      # Custom Steps
+      - name: Declarative Post actions
+        run: echo Hello, world!
