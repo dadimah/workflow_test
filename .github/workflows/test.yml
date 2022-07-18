@@ -1,0 +1,19 @@
+--- 
+
+name: Test workflow Name
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs: 
+      stringInput:
+        type: string
+        description: String variable input
+      choiceInput:
+        type: choice
+        options:
+         - option1
+         - option2
+      booleanInput:
+        type: boolean
+        description: Boolean checkbox
