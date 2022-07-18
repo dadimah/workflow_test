@@ -1,7 +1,5 @@
-# Name of the Github Workflow
 name: "Github Workflow Name"
 
-# Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
@@ -12,24 +10,17 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   job_01:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      # - name: Checkout repository
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      # Custom Steps
       - name: Run a one-line script
         run: echo Hello, world!
 
-      # Custom Steps
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
@@ -39,41 +30,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # - name: Checkout repository
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      # Custom Steps
       - name: Declarative Tool Install
-        run: echo Hello, world!
-      
-      # Custom Steps
+        run: echo Hello, world!    
+
       - name: Check Previos build
         run: echo Hello, world!
 
-      # Custom Steps
       - name: Preparation
         run: echo Hello, world!
 
-      # Custom Steps
       - name: Build Parent
         run: echo Hello, world!
 
-      # Custom Steps
       - name: Analyze Dependencies
         run: echo Hello, world!
 
-      # Custom Steps
       - name: Analyze oseries
         run: echo Hello, world!
 
-      # Custom Steps
       - name: Analyze oseries database
         run: echo Hello, world!
 
-      # Custom Steps
       - name: Analyze oseries database-image
         run: echo Hello, world!
 
-      # Custom Steps
       - name: Declarative Post actions
         run: echo Hello, world!
