@@ -17,3 +17,6 @@ on:
       booleanInput:
         type: boolean
         description: Boolean checkbox
+
+jobs:
+  
